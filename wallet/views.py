@@ -11,7 +11,7 @@ def holdings(request):
     if request.user.id:
         module_dir = os.path.dirname(__file__) 
         #  Full path to text.
-        file_path = os.path.join(module_dir, './static/portfolio/text/coin_list.txt')   
+        file_path = os.path.join(module_dir, './static/coin_list.txt')   
         coin_list = txtToArray(file_path)
 
         # Holdings from database
@@ -65,3 +65,17 @@ def holdings(request):
         })
     else:
         return redirect('user-portfolio')
+
+
+# Method to Delete Holdings
+def delete_holding(request):
+    pk = request.POST['pk']
+    holding = Holding.objects.get(pk=pk)
+    print(f'Holding to be sold: {holding}')
+    if request.POST.get('use_mv'):
+        holding.exit_price = get_price(holding.coin_id.lower())
+    else:
+        holding.exit_price = request.POST.get('exit-price')
+    holding.sold = True
+    holding.save()
+    return redirect('holdings')
