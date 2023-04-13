@@ -29,3 +29,11 @@ class HoldingForm(ModelForm):
         instance.symbol = _name[1][:-1]
         instance.save()
         return instance
+    
+    def clean_entry_price(self):
+        value = self.cleaned_data["entry_price"]
+        if value == 0:
+            raise forms.ValidationError("Entry Price cannot be 0 or negative")
+        elif not value:
+            value = 1
+        return value
