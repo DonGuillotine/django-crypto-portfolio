@@ -402,9 +402,5 @@
     popupVideo();
     flattabs1();
     flattabs2();
-
-    AOS.init({
-      duration: 1000,
-    });
   });
 })(jQuery);
