@@ -64,7 +64,7 @@ def holdings(request):
             'current': True
         })
     else:
-        return redirect('user-portfolio')
+        return redirect('home')
 
 
 # Method to Delete Holdings
