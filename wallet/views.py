@@ -109,3 +109,17 @@ def previous_holdings(request):
         'cum_pl_perc': f'{previous_portfolio.get_cumulative_pl_percent():,}',
         'current': False,
     })
+
+
+# Method to delete previous holdings
+def delete_previous_holding(request, holding_id):
+    holding = Holding.objects.get(pk=holding_id)
+    current = True if not holding.sold else False
+    print(holding)
+    holding.delete()
+
+
+    if current:
+        return redirect('holdings')
+    else:
+        return redirect('previous-holdings')
