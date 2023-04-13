@@ -16,6 +16,11 @@
     <link rel="apple-touch-icon-precomposed" href="{% static 'images/favicon.png' %}" />
   </head>
   <body class="body header-fixed home-3">
+    {% include 'includes/navbar.html' %}
+        {% block content %}
+
+        {% endblock %}
+    {% include 'includes/footer.html' %}
 
     <script src="{% static '}js/aos.js' %"></script>
     <script src="{% static 'js/jquery.min.js' %}"></script>
