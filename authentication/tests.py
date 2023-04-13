@@ -30,6 +30,7 @@ class AuthenticationTest(TestCase):
         self.assertRedirects(response, reverse('login'))
 
 
+    # Test for registration success
     def test_registration(self):
             data = {
                 'username': 'testuser',
@@ -43,6 +44,7 @@ class AuthenticationTest(TestCase):
             user = User.objects.first()
             self.assertEqual(user.username, 'testuser')
             self.assertEqual(user.email, 'testuser@example.com')
+
 
     #  Test forgot password
     def test_forgot_password(self):
