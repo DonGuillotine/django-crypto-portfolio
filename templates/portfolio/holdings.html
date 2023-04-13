@@ -97,36 +97,34 @@
                         </tr>
                       </thead>
                       <tbody>
+                        {% for row in portfolio.positions %}
                         <tr>
-                          <td class="number">
-                            <span>1</span>
-                          </td>
-                          <td class="asset">
-                            <span class="icon-btc"
-                              ><span class="path1"></span
-                              ><span class="path2"></span
-                            ></span>
-                            <p>
-                              <span class="boild">USDT</span>
-                              <span class="unit">Tether USD</span>
-                            </p>
-                          </td>
-                          <td class="color-success">
-                            <span class="boild">7.46% APR</span>
-                          </td>
-                          <td>
-                            <span class="boild">0.2785689852 BTC</span>
-                            <span class="unit">$10,098.36</span>
-                          </td>
-                          <td>
-                            <span class="boild">0.2785689852 BTC</span>
-                            <span class="unit">$10,098.36</span>
-                          </td>
-                          <td>
-                            <span class="boild">0.2785689852 BTC</span>
-                            <span class="unit">$10,098.36</span>
-                          </td>
+                            <td>
+                                <button type="button" class="btn btn-link btn-sm m-0 p-0" data-bs-toggle="modal" data-bs-target="#modal{{ row.dbID }}">
+                                    <i class="bi bi-trash text-light"></i>
+                                </button>
+                                <!-- MODAL -->
+                                {% include 'portfolio/includes/modal-delete.html' %}
+                            </td>
+                            <th scope="row" class="row-index"></th>   
+                            <td>
+                                {% if row.current_value > row.entry_amount %}
+                                    <i class="bi bi-caret-up" style="color: lightgreen;"></i>
+                                {% elif row.current_value < row.entry_amount %} 
+                                    <i class="bi bi-caret-down" style="color: red;"></i>
+                                {% else %}
+                                    <i class="bi bi-dash-square" style="color: white"></i>
+                                {% endif %}
+                            </td>
+                            <td style="font-weight: 500;">{{ row.coin_id }} ({{ row.symbol }})</td>
+                            <td>${{ row.current_value }}</td>
+                            <td>{{ row.pl }} {{ row.pl_percent }}%</td>
+                            <td>{{ row.current_price }}</td>
+                            <td>{{ row.entry_price }}</td>
+                            <td>{{ row.entry_amount }}</td>
+                            <td>{{ row.date|date:"SHORT_DATE_FORMAT" }}</td>
                         </tr>
+                        {% endfor %}
                       </tbody>
                     </table>
                   </div>
