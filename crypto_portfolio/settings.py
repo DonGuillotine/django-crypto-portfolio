@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'home',
-    'authentication'
+    'authentication',
+    'wallet'
 ]
 
 MIDDLEWARE = [
