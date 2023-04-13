@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
-from django.contrib import messages
+from django.contrib import messages, auth
 from django.contrib.auth.forms import UserCreationForm
 from authentication.forms import RegisterForm
 
@@ -13,27 +14,27 @@ def login(request):
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
         if user is not None:
-            login(request, user)
+            auth.login(request, user)
             print("success")
-            return redirect('holdings')
+            return redirect('home')
         else:
-            print('failed')
-            messages.success(request, "There was an error loggin in. Please try again.")
+            messages.error(request, "There was an error loggin in. Please try again.")
             return redirect('login')
 
     else:
-        return render(request, 'authenticate/login.html', {})
+        return render(request, 'authentication/login.html', {})
 
 
 #  Function to Log User Out
-def logout(request):
-    logout(request)
+@login_required(login_url='login')
+def logout_user(request):
+    auth.logout(request)
     messages.success(request, "You have been successfully logged out.")
-    return redirect('/')
+    return redirect('home')
 
 
 #  Function to register a User
-def register_trader(request):
+def register(request):
     if request.method == "POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
@@ -41,12 +42,12 @@ def register_trader(request):
             username = form.cleaned_data['username']
             password = form.cleaned_data['password1']
             user = authenticate(username=username, password=password)
-            login(request, user)
+            auth.login(request, user)
             messages.success(request, ("Registration successful!"))
-            return redirect("holdings")
+            return redirect("home")
     else:
         form = RegisterForm()
 
-    return render(request, 'authenticate/register.html', {
+    return render(request, 'authentication/register.html', {
         'form':form
     })

@@ -13,7 +13,7 @@
               <ul class="breadcrumb">
                 <li><a href="/">Home</a></li>
                 <li><p class="fs-18">/</p></li>
-                <li><p class="fs-18">Login</p></li>
+                <li><p class="fs-18">Register</p></li>
               </ul>
             </div>
           </div>
@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="block-text center">
-                <h3 class="heading">Login To Crypto Manager</h3>
+                <h3 class="heading">Register To Crypto Manager</h3>
                 <p class="desc fs-20">
                   Welcome back!
                 </p>
@@ -58,89 +58,17 @@
             </div>
             <div class="col-md-12">
               <div class="flat-tabs">
-                <ul class="menu-tab">
-                  <li class="active"><h6 class="fs-16">Email</h6></li>
-                  <li><h6 class="fs-16">Mobile</h6></li>
-                </ul>
   
                 <div class="content-tab">
                   <div class="content-inner">
-                    <form>
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Email/ID</label>
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="exampleInputEmail1"
-                          placeholder="Please fill in the email form."
-                        />
-                      </div>
-                      <div class="form-group s1">
-                        <label>Password </label>
-                        <input
-                          type="password"
-                          class="form-control"
-                          placeholder="Please enter a password."
-                        />
-                      </div>
+                    <form action="{% url 'register' %}" method="POST">
+                      {% csrf_token %}
+                      {{ form.as_p }}
   
-                      <div class="form-group form-check">
-                        <div>
-                          <input type="checkbox" class="form-check-input" />
-                          <label class="form-check-label">Remember Me</label>
-                        </div>
-                        <p>Forgot Password?</p>
-                      </div>
-  
-                      <button type="submit" class="btn-action">Login</button>
+                      <button type="submit" class="btn-action">Register</button>
                       <div class="bottom">
-                        <p>Not a member?</p>
-                        <a href="register.html">Register</a>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="content-inner">
-                    <form>
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Mobile Phone</label>
-                        <div>
-                          <select
-                            class="form-control"
-                            id="exampleFormControlSelect1"
-                          >
-                            <option>+1</option>
-                            <option>+84</option>
-                            <option>+82</option>
-                            <option>+32</option>
-                          </select>
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Your Phone number"
-                          />
-                        </div>
-                      </div>
-                      <div class="form-group s1">
-                        <label>Password </label>
-                        <input
-                          type="password"
-                          class="form-control"
-                          placeholder="Please enter a password."
-                        />
-                      </div>
-  
-                      <div class="form-group form-check">
-                        <div>
-                          <input type="checkbox" class="form-check-input" />
-                          <label class="form-check-label">Remember Me</label>
-                        </div>
-                        <p>Forgot Password?</p>
-                      </div>
-  
-                      <button type="submit" class="btn-action">Login</button>
-                      <div class="bottom">
-                        <p>Not a member?</p>
-                        <a href="register.html">Register</a>
+                        <p>Already a member?</p>
+                        <a href="{% url 'login' %}">Login</a>
                       </div>
                     </form>
                   </div>
@@ -150,3 +78,4 @@
           </div>
         </div>
       </section>
+{% endblock %}

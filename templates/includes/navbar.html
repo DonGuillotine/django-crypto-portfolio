@@ -137,9 +137,21 @@
                     </a>
                   </div>
                   <div class="mobile-button"><span></span></div>
+                  {% if user.is_authenticated %}
                   <div class="wallet">
-                    <a href="wallet.html"> Wallet </a>
+                    <a href="/"> Wallet </a>
                   </div>
+                  <div class="wallet">
+                    <a href="{% url 'logout' %}"> Logout </a>
+                  </div>
+                  {% else %}
+                  <div class="wallet">
+                    <a href="{% url 'login' %}"> Login </a>
+                  </div>
+                  <div class="wallet">
+                    <a href="{% url 'register' %}"> Register </a>
+                  </div>
+                  {% endif %}
                 </div>
               </div>
             </div>

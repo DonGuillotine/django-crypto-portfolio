@@ -1,5 +1,12 @@
 asgiref==3.6.0
+certifi==2021.10.8
+charset-normalizer==2.0.12
 Django==4.2
-python-decouple==3.8
+idna==3.3
+numpy==1.22.3
+pycoingecko==2.2.0
+python-decouple==3.6
+requests==2.27.1
 sqlparse==0.4.3
 tzdata==2023.3
+urllib3==1.26.9
