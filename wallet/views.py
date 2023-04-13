@@ -79,3 +79,33 @@ def delete_holding(request):
     holding.sold = True
     holding.save()
     return redirect('holdings')
+
+
+# Function for Previous Holdings
+def previous_holdings(request):
+    btc = f'{get_price("bitcoin"):,}'
+    eth = f'{get_price("ethereum"):,}'
+    fg = get_fg()
+    fg_class = get_fg(classification=True)
+
+    # Holdings from database
+    prev_holdings_db = Holding.objects.filter(trader=request.user.id).filter(sold=True) 
+    previous_portfolio = PreviousPositions()
+
+    for holding in prev_holdings_db:
+        previous_portfolio.add(holding.coin_id, holding.symbol, float(holding.entry_price), float(holding.entry_amount), float(holding.exit_price), date=holding.entry_date, inExitDate=holding.exit_date, dbID=holding.id)
+
+    cum_pl = previous_portfolio.get_cumulative_pl()
+    stance = cum_up_or_down(cum_pl)
+    return render(request, 'portfolio/previous_holdings.html', {
+        'BTC': btc,
+        'ETH': eth,
+        'FG': fg,
+        'FG_class': fg_class,
+        'previous_portfolio': previous_portfolio,
+        'stance': stance,
+        'cum_val': f'{previous_portfolio.get_cumulative_value():,}',
+        'cum_pl': f'{cum_pl:,}',
+        'cum_pl_perc': f'{previous_portfolio.get_cumulative_pl_percent():,}',
+        'current': False,
+    })
