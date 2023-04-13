@@ -25,3 +25,10 @@ def login(request):
 
     else:
         return render(request, 'authenticate/login.html', {})
+
+
+#  Function to Log User Out
+def logout(request):
+    logout(request)
+    messages.success(request, "You have been successfully logged out.")
+    return redirect('user-portfolio')
