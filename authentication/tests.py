@@ -11,6 +11,7 @@ class AuthenticationTest(TestCase):
         self.user = User.objects.create_user(username='testuser', password='testpassword')
 
 
+    #  Test Login with dummy data
     def test_login(self):
         url = reverse('login')
         response = self.client.post(url, {
@@ -21,6 +22,7 @@ class AuthenticationTest(TestCase):
         self.assertRedirects(response, reverse('home'))
 
 
+    #  Test Logout with mimic
     def test_logout(self):
         url = reverse('logout')
         response = self.client.get(url)
@@ -28,6 +30,7 @@ class AuthenticationTest(TestCase):
         self.assertRedirects(response, reverse('login'))
 
 
+    #  Test forgot password
     def test_forgot_password(self):
         url = reverse('password_reset')
         response = self.client.post(url, {
