@@ -18,4 +18,4 @@ class Holding(models.Model):
         if self.sold:
             return f'{self.symbol} - |BOUGHT: {self.entry_date} / {self.entry_price}|   |SOLD: {self.exit_date} / {self.exit_price}|'
         else:
-            return f'{self.symbol} - |BOUGHT: {self.entry_date} / {self.entry_price}|'
+            return f'{self.symbol} - |BOUGHT: {self.entry_date} / {self.entry_price}|' 
