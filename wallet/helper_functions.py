@@ -26,3 +26,12 @@ def get_fg(classification=False):
         return fg['value']
     else:
         return fg['value_classification']
+    
+
+#  txtToArray function
+def txtToArray(name):
+    with open(name, 'r') as f:
+        coins = []
+        for line in f:
+            coins.append(line[:-2]) # Avoids ',\n' at end
+    return coins
