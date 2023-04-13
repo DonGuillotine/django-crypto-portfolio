@@ -3,7 +3,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 
 # Created Login Test
-class LoginTraderTest(TestCase):
+class AuthenticationTest(TestCase):
     def setUp(self):
         self.client = Client()
         self.login_url = reverse('login')
