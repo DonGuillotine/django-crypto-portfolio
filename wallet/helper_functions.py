@@ -28,7 +28,7 @@ def get_fg(classification=False):
         return fg['value_classification']
     
 
-#  txtToArray function
+#  TxtToArray function
 def txtToArray(name):
     with open(name, 'r') as f:
         coins = []
@@ -37,7 +37,7 @@ def txtToArray(name):
     return coins
 
 
-# Although trivial, this function is necessary for correct template rendering in the cumulative row colour (green/red).
+#  Correct template rendering in the cumulative row colour (green/red).
 def cum_up_or_down(cum_pl):
     if cum_pl > 0:
         result = "up"
