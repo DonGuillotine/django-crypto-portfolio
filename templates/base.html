@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -7,22 +8,22 @@
     <title>Crypto Manager</title>
 
     <!-- Style CSS -->
-    <link rel="stylesheet" href="app/dist/app.css" />
-    <link rel="stylesheet" href="app/dist/magnific-popup.css" />
+    <link rel="stylesheet" href="{% static 'css/app.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" />
     <!-- End Style CSS -->
 
-    <link rel="shortcut icon" href="assets/images/logo/favicon.png" />
-    <link rel="apple-touch-icon-precomposed" href="assets/images/logo/favicon.png" />
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" />
+    <link rel="apple-touch-icon-precomposed" href="{% static 'images/favicon.png' %}" />
   </head>
   <body class="body header-fixed home-3">
 
-    <script src="app/js/aos.js"></script>
-    <script src="app/js/jquery.min.js"></script>
-    <script src="app/js/jquery.easing.js"></script>
-    <script src="app/js/popper.min.js"></script>
-    <script src="app/js/bootstrap.min.js"></script>
-    <script src="app/js/app.js"></script>
-    <script src="app/js/jquery.peity.min.js"></script>
-    <script src="app/js/switchmode.js"></script>
-    <script src="app/js/jquery.magnific-popup.min.js"></script>
+    <script src="{% static '}js/aos.js' %"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/jquery.peity.min.js' %}"></script>
+    <script src="{% static 'js/switchmode.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
   </body>
