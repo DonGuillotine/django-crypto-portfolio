@@ -21,3 +21,11 @@ class HoldingForm(ModelForm):
             'entry_price': forms.NumberInput(attrs={'class':'form-control', 'placeholder':'Entry Price', 'name':'entry-price', 'id':'entry-price', 'required':False}),
             'entry_amount': forms.NumberInput(attrs={'class':'form-control', 'placeholder':'Entry Amount (USD)'}),
         }
+    
+    def save(self, commit=True):
+        instance = super(HoldingForm, self).save(commit=False)
+        _name = self.cleaned_data.get('name').split(' (')
+        instance.coin_id = _name[0]
+        instance.symbol = _name[1][:-1]
+        instance.save()
+        return instance
