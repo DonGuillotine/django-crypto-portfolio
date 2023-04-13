@@ -4,14 +4,14 @@ from django import forms
 
 
 #  Created User Registration Class
-class RegisterTraderForm(UserCreationForm):
+class RegisterForm(UserCreationForm):
     class Meta:
         model = User
 
         fields = ("username", "password1", "password2")
 
     def __init__(self, *args, **kwargs):
-        super(RegisterTraderForm, self).__init__(*args, **kwargs)
+        super(RegisterForm, self).__init__(*args, **kwargs)
 
         self.fields["username"].widget.attrs["class"] = "form-control form-control-sm"
         self.fields["password1"].widget.attrs["class"] = "form-control form-control-sm"
