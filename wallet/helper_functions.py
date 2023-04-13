@@ -35,3 +35,14 @@ def txtToArray(name):
         for line in f:
             coins.append(line[:-2]) # Avoids ',\n' at end
     return coins
+
+
+# Although trivial, this function is necessary for correct template rendering in the cumulative row colour (green/red).
+def cum_up_or_down(cum_pl):
+    if cum_pl > 0:
+        result = "up"
+    elif cum_pl < 0:
+        result = "down"
+    else:
+        result = "stagnant"
+    return result
