@@ -19,6 +19,7 @@ Crypto-Currency Wallets
 -----------------------
 
 -   Users can Sell or delete cryptocurrencies to their wallet
+
 ![Screenshot (192)](https://user-images.githubusercontent.com/89584431/231945679-c920bbd7-664f-4880-b96b-e84465b198f2.png)
 
 -   Each cryptocurrency has a name, current price, and quantity which the user can add to their portfolio
