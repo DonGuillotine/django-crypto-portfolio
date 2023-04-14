@@ -20,6 +20,9 @@ Crypto-Currency Wallets
 
 -   Users can add and remove cryptocurrencies to their wallet
 -   Each cryptocurrency has a name, current price, and quantity which the user can add to their portfolio
+
+![Screenshot (191)](https://user-images.githubusercontent.com/89584431/231945367-0751bd8e-d222-48bf-80f1-d868aea667fd.png)
+
 -   Users can see a detail view of their portfolio, which shows the value of each cryptocurrency in their wallet and the total value of their portfolio
 
 ![Screenshot (190)](https://user-images.githubusercontent.com/89584431/231945186-326ed496-afa9-4b47-93e6-befee7557e55.png)
