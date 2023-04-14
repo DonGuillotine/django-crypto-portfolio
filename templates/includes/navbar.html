@@ -139,7 +139,7 @@
                   <div class="mobile-button"><span></span></div>
                   {% if user.is_authenticated %}
                   <div class="wallet">
-                    <a href="/"> Wallet </a>
+                    <a href="{% url 'holdings' %}"> Wallet </a>
                   </div>
                   <div class="wallet">
                     <a href="{% url 'logout' %}"> Logout </a>

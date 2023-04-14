@@ -16,6 +16,7 @@ def login(request):
         if user is not None:
             auth.login(request, user)
             print("success")
+            messages.success(request, "You have been successfully logged in.")
             return redirect('holdings')
         else:
             messages.error(request, "There was an error loggin in. Please try again.")

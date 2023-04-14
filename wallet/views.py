@@ -2,16 +2,18 @@ from django.shortcuts import render, redirect
 from .models import Holding
 from .positions import *
 from .helper_functions import get_price, get_fg, txtToArray, cum_up_or_down
+from django.contrib.auth.decorators import login_required
 from .forms import HoldingForm
 from datetime import date
 import os
 
 
+@login_required(login_url='login')
 def holdings(request):
     if request.user.id:
         module_dir = os.path.dirname(__file__) 
         #  Full path to text.
-        file_path = os.path.join(module_dir, './static/coin_list.txt')   
+        file_path = os.path.join(module_dir, './coins/coin_list.txt')   
         coin_list = txtToArray(file_path)
 
         # Holdings from database
@@ -67,6 +69,7 @@ def holdings(request):
         return redirect('home')
 
 
+@login_required(login_url='login')
 # Method to Delete Holdings
 def delete_holding(request):
     pk = request.POST['pk']
@@ -81,6 +84,7 @@ def delete_holding(request):
     return redirect('holdings')
 
 
+@login_required(login_url='login')
 # Function for Previous Holdings
 def previous_holdings(request):
     btc = f'{get_price("bitcoin"):,}'
@@ -111,6 +115,7 @@ def previous_holdings(request):
     })
 
 
+@login_required(login_url='login')
 # Method to delete previous holdings
 def delete_previous_holding(request, holding_id):
     holding = Holding.objects.get(pk=holding_id)

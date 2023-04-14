@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+    <!-- PageTitle -->
+    <section class="page-title">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h3 class="heading">Wallet</h3>
+            </div>
+            <div class="col-md-6">
+              <ul class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><p class="fs-18">/</p></li>
+                <li><p class="fs-18">Wallet</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End PageTitle -->
+  
+      <section class="wallet buy-crypto flat-tabs">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-3 col-md-12">
+              <ul class="menu-tab">
+                <li><h6 class="fs-16"><a href="{% url 'holdings' %}">Overview</a></h6></li>
+                <li><h6 class="fs-16">Refer a Friend</h6></li>
+                <li class="active"><h6 class="fs-16"><a href="{% url 'previous-holdings' %}">Previous Trades</a></h6></li>
+                <li><h6 class="fs-16"><a href="{% url 'logout' %}"> Logout </a></h6></li>
+              </ul>
+            </div>
+            <div class="col-xl-9 col-md-12">
+              <div class="content-tab">
+                <div class="content-inner">
+                  <div class="wallet-main">
+                    <h4 class="heading">Overview</h4>
+  
+                    <div class="wallet-body">
+                      <div class="left">
+  
+                        <div class="price">
+                            <h2 id="btc"><i class='fab fa-bitcoin'></i><span class="heading-price"> ${{ BTC }}</span></h2>
+                        </div>
+                        <div class="price">
+                            <h2 id="eth"><i class='fab fa-ethereum'></i><span class="heading-price"> ${{ ETH }}</span></h2>
+                          </div>
+                      </div>
+                      <div class="right">
+                        <div class="row" id="small-fg">
+                            <h2>{{ FG }}</h2>
+                        </div>
+                        <div class="row">
+                            <h4 style="font-size: 100%;">{{ FG_class }}</h4>
+                        </div>
+                        
+                        <div class="progress" style="background: linear-gradient(to right, red, yellow, green)">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="{{ FG }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ FG }}%; background-color:rgba(0, 0, 0, 0.3)"><span style="border-right: 3px solid black;">{{ FG }}%</span></div>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-37">
+                    <div class="col-sm-2">
+                    {% if current %}
+                    <span><a href="{% url 'holdings' %}" id="refresh"><button class="btn btn-success"><i class="bi bi-arrow-clockwise"></i></button></a></span>
+                    {% else %}
+                        <span><a href="{% url 'holdings' %}" class="btn btn-outline-info" style="font-size: 80%;"><i class="bi bi-arrow-bar-left"></i> Back</a></span>
+                    {% endif %}
+                    </div>
+                    <div class="col-sm-10">
+                    {% if stance == "up" %}
+                        <h5>Value - $<span class="text-decoration-underline">{{ cum_val }}</span> | P/L: <span style="color: lightgreen;">${{ cum_pl }} ({{ cum_pl_perc }}%)</span></h5>
+                    {% elif stance == "down" %}
+                        <h5>Value - $<span class="text-decoration-underline">{{ cum_val }}</span> | P/L: <span style="color: red;">${{ cum_pl }} ({{ cum_pl_perc }}%)</span></h5>
+                    {% else %}
+                        <h5>Value - $<span class="text-decoration-underline">{{ cum_val }}</span> | P/L: <span style="color: whitesmoke;">${{ cum_pl }} ({{ cum_pl_perc }}%)</span></h5>
+                    {% endif %}
+                        </div>
+                    </div>
+                  <div class="row pt-2">
+                    {% if form.errors %}
+                        {% for field in form %}
+                            {% for error in field.errors %} 
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                <strong>{{ error|escape }}</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                            {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+  
+                  <div class="coin-list-wallet">
+                    <table class="table">
+                      <thead>
+                        <tr class="text-secondary">
+                            <th scope="col"></th>
+                            <th scope="col">#</th>
+                            <th scope="col"></th>
+                            <th scope="col">Coin Name</th>
+                            <th scope="col">Sold Value</th>
+                            <th scope="col">P/L</th>
+                            <th scope="col">Sold Price</th>
+                            <th scope="col">Entry Price</th>
+                            <th scope="col">Entry Amt</th>
+                            <th scope="col">Entry Date</th>
+                            <th scope="col">Exit Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for row in previous_portfolio.previous_positions %}
+                            <tr class="text-secondary">
+                                <td>
+                                    <a href="{% url 'delete-previous-holding' row.dbID %}" onclick="return confirm('Do you want to permanently remove {{row.symbol}} from your portfolio?')" class="link-light"><i class="bi bi-trash text-danger"></i></a>                         
+                                </td>
+                                <th scope="row" class="row-index"></th>   
+                                <td>
+                                    {% if row.value_sold > row.entry_amount %}
+                                        <i class="bi bi-caret-up" style="color: lightgreen;"></i>
+                                    {% elif row.value_sold < row.entry_amount %} 
+                                        <i class="bi bi-caret-down" style="color: red;"></i>
+                                    {% else %}
+                                        <i class="bi bi-dash-square" style="color: white"></i>
+                                    {% endif %}
+                                </td>
+                                <td style="font-weight: 500;">{{ row.coin_id }} ({{ row.symbol }})</td>
+                                <td>${{ row.value_sold }}</td>
+                                <td>{{ row.pl }} {{ row.pl_percent }}%</td>
+                                <td>{{ row.exit_price }}</td>
+                                <td>{{ row.entry_price }}</td>
+                                <td>{{ row.entry_amount }}</td>
+                                <td>{{ row.date|date:"SHORT_DATE_FORMAT" }}</td>
+                                <td>{{ row.exit_date|date:"SHORT_DATE_FORMAT" }}</td>
+                            </tr>
+                        {% endfor %}
+                    
+                    </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+{% endblock %}
