@@ -26,7 +26,7 @@ Homepage
 --------
 
 -   The homepage shows the 24-hour price and percentage change of the top 10 ranked cryptocurrencies
--   It also displays the 24-hour price and percentage change of the currencies in the user's portfolio
+-   It also displays the 24-hour price and percentage change of the currencies
 
 Installation
 ------------
