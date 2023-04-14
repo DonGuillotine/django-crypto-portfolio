@@ -37,14 +37,29 @@
               <div class="main">
                 <h6>Copy the code!</h6>
 
-                <form action="https://themesflat.co/html/rockie/sell-crypto-confirm.html" class="form">
                   <div class="form-field">
                     <label></label>
-                    <input type="text" class="dollar" value="{{ referral_link }}" />
+                    <input type="text" id="myInput" class="dollar" value="{{ referral_link }}" />
                   </div>
 
-                  <button type="submit" class="btn-action">Copy</button>
-                </form>
+                  <button onclick="copyToClipboard()" type="submit" class="btn-action">Copy</button>
+                  <script>
+                    function copyToClipboard() {
+                            /* Get the text field */
+                            var copyText = document.getElementById("myInput");
+
+                            /* Select the text field */
+                            copyText.select();
+                            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+                            /* Copy the text inside the text field to the clipboard */
+                            document.execCommand("copy");
+
+                            /* Alert the copied text */
+                            alert("Copied the text: " + copyText.value);
+                        }
+
+                  </script>
               </div>
             </div>
           </div>
