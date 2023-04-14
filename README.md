@@ -28,6 +28,12 @@ Homepage
 -   The homepage shows the 24-hour price and percentage change of the top 10 ranked cryptocurrencies
 -   It also displays the 24-hour price and percentage change of the currencies
 
+![Screenshot (189)](https://user-images.githubusercontent.com/89584431/231944713-60b31f47-488f-4389-82ef-c66d08266bff.png)
+
+
+![Screenshot (188)](https://user-images.githubusercontent.com/89584431/231944599-81f5c591-e684-45e6-a5d8-45d0baded477.png)
+
+
 Installation
 ------------
 
@@ -36,6 +42,7 @@ Installation
 3.  Apply database migrations: `python manage.py migrate`
 4.  Create a Superuser: `python manage.py createsuperuser`
 5.  Run the server: `python manage.py runserver`
+6.  In the `settings.py` change `SECRET_KEY = config('SECRET_KEY')` to `SECRET_KEY = "ANYRANDOMKEY"`
 
 Usage
 -----
