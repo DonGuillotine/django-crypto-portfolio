@@ -36,17 +36,18 @@
 
               <div class="main">
                 <h6>Copy the code!</h6>
-
+                <form class="form">
                   <div class="form-field">
                     <label></label>
-                    <input type="text" id="myInput" class="dollar" value="{{ referral_link }}" />
+                    <input type="text" id="myInputx" class="dollar" value="{{ referral_link }}" />
                   </div>
+                </form>
 
                   <button onclick="copyToClipboard()" type="submit" class="btn-action">Copy</button>
                   <script>
                     function copyToClipboard() {
                             /* Get the text field */
-                            var copyText = document.getElementById("myInput");
+                            var copyText = document.getElementById("myInputx");
 
                             /* Select the text field */
                             copyText.select();
