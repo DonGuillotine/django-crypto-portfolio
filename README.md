@@ -15,6 +15,9 @@ Referral System
 -   Users can invite other users to join the platform using a referral link
 -   Referral links are tracked and the referrer receives a bonus when a new user signs up using their link
 
+![Screenshot (193)](https://user-images.githubusercontent.com/89584431/231945891-26eac306-8a03-4b77-94ca-8f120ee3f1c4.png)
+
+
 Crypto-Currency Wallets
 -----------------------
 
