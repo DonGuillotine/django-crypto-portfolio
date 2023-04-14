@@ -16,7 +16,7 @@ def login(request):
         if user is not None:
             auth.login(request, user)
             print("success")
-            return redirect('home')
+            return redirect('holdings')
         else:
             messages.error(request, "There was an error loggin in. Please try again.")
             return redirect('login')
@@ -44,7 +44,7 @@ def register(request):
             user = authenticate(username=username, password=password)
             auth.login(request, user)
             messages.success(request, ("Registration successful!"))
-            return redirect("home")
+            return redirect("holdings")
     else:
         form = RegisterForm()
 
