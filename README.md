@@ -18,7 +18,9 @@ Referral System
 Crypto-Currency Wallets
 -----------------------
 
--   Users can add and remove cryptocurrencies to their wallet
+-   Users can Sell or delete cryptocurrencies to their wallet
+![Screenshot (192)](https://user-images.githubusercontent.com/89584431/231945679-c920bbd7-664f-4880-b96b-e84465b198f2.png)
+
 -   Each cryptocurrency has a name, current price, and quantity which the user can add to their portfolio
 
 ![Screenshot (191)](https://user-images.githubusercontent.com/89584431/231945367-0751bd8e-d222-48bf-80f1-d868aea667fd.png)
