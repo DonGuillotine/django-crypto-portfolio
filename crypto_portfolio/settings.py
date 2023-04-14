@@ -42,7 +42,8 @@ INSTALLED_APPS = [
 
     'home',
     'authentication',
-    'wallet'
+    'wallet',
+    'referrals'
 ]
 
 MIDDLEWARE = [

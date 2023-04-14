@@ -24,4 +24,1130 @@
       </section>
       <!-- End Banner Top -->
 
+      <section id="start" class="coin-list">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block-text">
+                <h3 class="heading">Market Update</h3>
+                <a class="btn-action-2" href="#">See All Coins</a>
+              </div>
+  
+              <div class="coin-list__main">
+                <div class="flat-tabs">
+                  <div class="content-tab">
+                    <div class="content-inner">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Rank</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Symbol</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Market Cap</th>
+                            <th scope="col">24h Change</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% for currency in top_currencies %}
+                          <tr>
+                            <td>{{ currency.market_cap_rank }}</td>
+                            <td>{{ currency.name }}</td>
+                            <td>{{ currency.symbol }}</td>
+                            <td>{{ currency.current_price }}</td>
+                            <td>{{ currency.market_cap }}</td>
+                            <td>{{ currency.price_change_percentage_24h }}</td>
+                          </tr>
+                        {% endfor %}
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="content-inner">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Last Price</th>
+                            <th scope="col">24h %</th>
+                            <th scope="col">Market Cap</th>
+                            <th scope="col">Last 7 Days</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>1</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-btc"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                ></span>
+                                <span>Bitcoin</span>
+                                <span class="unit">BTC</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-9"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>2</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-eth"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span></span
+                                ><span>Ethereum</span>
+                                <span class="unit">ETH</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-5.12%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-10"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>3</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-bnb"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span
+                                  ><span class="path6"></span></span
+                                ><span>BNB</span>
+                                <span class="unit">BNB/USD</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-3.75%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-11"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>4</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-tether"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span></span
+                                ><span>Tether</span>
+                                <span class="unit">USDT/USD</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-12"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>5</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-sol"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span></span
+                                ><span>Solana</span>
+                                <span class="unit">SOL</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-13"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>6</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-btc"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span></span
+                                ><span>XRP</span> <span class="unit">XRP</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-2.22%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-14"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>7</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-ada"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span
+                                  ><span class="path6"></span
+                                  ><span class="path7"></span
+                                  ><span class="path8"></span
+                                  ><span class="path9"></span></span
+                                ><span>Cardano</span>
+                                <span class="unit">ADA</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+0.8%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-15"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>8</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-avax"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span></span
+                                ><span>Avalanche</span>
+                                <span class="unit">AVAX</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.41%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-16"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="content-inner">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Last Price</th>
+                            <th scope="col">24h %</th>
+                            <th scope="col">Market Cap</th>
+                            <th scope="col">Last 7 Days</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>1</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-btc"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                ></span>
+                                <span>Bitcoin</span>
+                                <span class="unit">BTC</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-17"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>2</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-eth"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span></span
+                                ><span>Ethereum</span>
+                                <span class="unit">ETH</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-5.12%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-18"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>3</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-bnb"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span
+                                  ><span class="path6"></span></span
+                                ><span>BNB</span>
+                                <span class="unit">BNB/USD</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-3.75%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-19"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>4</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-tether"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span></span
+                                ><span>Tether</span>
+                                <span class="unit">USDT/USD</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-20"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>5</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-sol"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span></span
+                                ><span>Solana</span>
+                                <span class="unit">SOL</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-21"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>6</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-btc"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span></span
+                                ><span>XRP</span> <span class="unit">XRP</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-2.22%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-22"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>7</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-ada"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span
+                                  ><span class="path6"></span
+                                  ><span class="path7"></span
+                                  ><span class="path8"></span
+                                  ><span class="path9"></span></span
+                                ><span>Cardano</span>
+                                <span class="unit">ADA</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+0.8%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-23"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>8</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-avax"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span></span
+                                ><span>Avalanche</span>
+                                <span class="unit">AVAX</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.41%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-24"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="content-inner">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Last Price</th>
+                            <th scope="col">24h %</th>
+                            <th scope="col">Market Cap</th>
+                            <th scope="col">Last 7 Days</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>1</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-btc"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                ></span>
+                                <span>Bitcoin</span>
+                                <span class="unit">BTC</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-25"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>2</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-eth"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span></span
+                                ><span>Ethereum</span>
+                                <span class="unit">ETH</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-5.12%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-26"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>3</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-bnb"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span
+                                  ><span class="path6"></span></span
+                                ><span>BNB</span>
+                                <span class="unit">BNB/USD</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-3.75%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-27"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>4</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-tether"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span></span
+                                ><span>Tether</span>
+                                <span class="unit">USDT/USD</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-28"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>5</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-sol"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span></span
+                                ><span>Solana</span>
+                                <span class="unit">SOL</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-29"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>6</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-btc"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span></span
+                                ><span>XRP</span> <span class="unit">XRP</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-2.22%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-30"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>7</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-ada"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span
+                                  ><span class="path6"></span
+                                  ><span class="path7"></span
+                                  ><span class="path8"></span
+                                  ><span class="path9"></span></span
+                                ><span>Cardano</span>
+                                <span class="unit">ADA</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+0.8%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-31"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>8</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-avax"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span></span
+                                ><span>Avalanche</span>
+                                <span class="unit">AVAX</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.41%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-32"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="content-inner">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Last Price</th>
+                            <th scope="col">24h %</th>
+                            <th scope="col">Market Cap</th>
+                            <th scope="col">Last 7 Days</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>1</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-btc"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                ></span>
+                                <span>Bitcoin</span>
+                                <span class="unit">BTC</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-33"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>2</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-eth"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span></span
+                                ><span>Ethereum</span>
+                                <span class="unit">ETH</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-5.12%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-34"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>3</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-bnb"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span
+                                  ><span class="path6"></span></span
+                                ><span>BNB</span>
+                                <span class="unit">BNB/USD</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-3.75%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-35"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>4</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-tether"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span></span
+                                ><span>Tether</span>
+                                <span class="unit">USDT/USD</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-36"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>5</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-sol"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span></span
+                                ><span>Solana</span>
+                                <span class="unit">SOL</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-37"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>6</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-btc"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span></span
+                                ><span>XRP</span> <span class="unit">XRP</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-2.22%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-38"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>7</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-ada"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span
+                                  ><span class="path6"></span
+                                  ><span class="path7"></span
+                                  ><span class="path8"></span
+                                  ><span class="path9"></span></span
+                                ><span>Cardano</span>
+                                <span class="unit">ADA</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+0.8%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-39"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>8</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-avax"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span></span
+                                ><span>Avalanche</span>
+                                <span class="unit">AVAX</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.41%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-40"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="content-inner">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Last Price</th>
+                            <th scope="col">24h %</th>
+                            <th scope="col">Market Cap</th>
+                            <th scope="col">Last 7 Days</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>1</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-btc"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                ></span>
+                                <span>Bitcoin</span>
+                                <span class="unit">BTC</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-41"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>2</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-eth"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span></span
+                                ><span>Ethereum</span>
+                                <span class="unit">ETH</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-5.12%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-42"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>3</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-bnb"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span
+                                  ><span class="path6"></span></span
+                                ><span>BNB</span>
+                                <span class="unit">BNB/USD</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-3.75%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-43"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>4</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-tether"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span></span
+                                ><span>Tether</span>
+                                <span class="unit">USDT/USD</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-44"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>5</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-sol"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span></span
+                                ><span>Solana</span>
+                                <span class="unit">SOL</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-45"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>6</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-btc"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span></span
+                                ><span>XRP</span> <span class="unit">XRP</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-2.22%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-46"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>7</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-ada"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span
+                                  ><span class="path6"></span
+                                  ><span class="path7"></span
+                                  ><span class="path8"></span
+                                  ><span class="path9"></span></span
+                                ><span>Cardano</span>
+                                <span class="unit">ADA</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+0.8%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-47"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>8</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-avax"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span></span
+                                ><span>Avalanche</span>
+                                <span class="unit">AVAX</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.41%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-48"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="content-inner">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Last Price</th>
+                            <th scope="col">24h %</th>
+                            <th scope="col">Market Cap</th>
+                            <th scope="col">Last 7 Days</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>1</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-btc"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                ></span>
+                                <span>Bitcoin</span>
+                                <span class="unit">BTC</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-49"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>2</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-eth"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span></span
+                                ><span>Ethereum</span>
+                                <span class="unit">ETH</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-5.12%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-50"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>3</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-bnb"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span
+                                  ><span class="path6"></span></span
+                                ><span>BNB</span>
+                                <span class="unit">BNB/USD</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-3.75%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-51"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>4</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-tether"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span></span
+                                ><span>Tether</span>
+                                <span class="unit">USDT/USD</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-52"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>5</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-sol"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span></span
+                                ><span>Solana</span>
+                                <span class="unit">SOL</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.45%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-53"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>6</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-btc"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span></span
+                                ><span>XRP</span> <span class="unit">XRP</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="down">-2.22%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-54"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>7</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-ada"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span
+                                  ><span class="path5"></span
+                                  ><span class="path6"></span
+                                  ><span class="path7"></span
+                                  ><span class="path8"></span
+                                  ><span class="path9"></span></span
+                                ><span>Cardano</span>
+                                <span class="unit">ADA</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+0.8%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-55"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row"><span class="icon-star"></span></th>
+                            <td>8</td>
+                            <td>
+                              <a href="#"
+                                ><span class="icon-avax"
+                                  ><span class="path1"></span
+                                  ><span class="path2"></span
+                                  ><span class="path3"></span
+                                  ><span class="path4"></span></span
+                                ><span>Avalanche</span>
+                                <span class="unit">AVAX</span></a
+                              >
+                            </td>
+                            <td class="boild">$56,623.54</td>
+                            <td class="up">+1.41%</td>
+                            <td class="boild">$880,423,640,582</td>
+                            <td><div id="total-revenue-chart-56"></div></td>
+                            <td><a href="#" class="btn">Trade</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 {% endblock %}
