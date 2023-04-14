@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages, auth
 from django.contrib.auth.forms import UserCreationForm
 from authentication.forms import RegisterForm
+from referrals.models import Referral
 
 # Function to handle Login
 def login(request):
@@ -36,6 +37,15 @@ def logout_user(request):
 
 #  Function to register a User
 def register(request):
+    referral_code = request.GET.get('ref')
+    if referral_code:
+        try:
+            referral = Referral.objects.get(referral_code=referral_code, used_by=None)
+            referral.used_by = request.user
+            referral.save()
+            messages.add_message(request, messages.SUCCESS, 'Yay! You received $50 from the referral link.')
+        except Referral.DoesNotExist:
+            pass
     if request.method == "POST":
         form = RegisterForm(request.POST)
         if form.is_valid():
