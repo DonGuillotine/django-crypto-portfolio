@@ -33,6 +33,10 @@ Crypto-Currency Wallets
 
 ![Screenshot (190)](https://user-images.githubusercontent.com/89584431/231945186-326ed496-afa9-4b47-93e6-befee7557e55.png)
 
+-   Users can View their Previous Holdings
+
+![Screenshot (194)](https://user-images.githubusercontent.com/89584431/231946100-a7e09d1e-a4e2-4c67-8be2-e143e7e3ef39.png)
+
 
 Homepage
 --------
