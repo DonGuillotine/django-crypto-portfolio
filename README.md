@@ -31,10 +31,11 @@ Homepage
 Installation
 ------------
 
-1.  Clone the repository: `git clone https://github.com/your-username/crypto-portfolio.git`
+1.  Clone the repository: `git clone https://github.com/DonGuillotine/django-crypto-portfolio`
 2.  Install the required packages: `pip install -r requirements.txt`
 3.  Apply database migrations: `python manage.py migrate`
-4.  Run the server: `python manage.py runserver`
+4.  Create a Superuser: `python manage.py createsuperuser`
+5.  Run the server: `python manage.py runserver`
 
 Usage
 -----
