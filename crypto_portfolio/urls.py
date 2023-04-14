@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', RedirectView.as_view(url='/portfolio')),
+    path('', include('wallet.urls')),
     path('', include('home.urls')),
     path('authentication/', include('authentication.urls')),
 ]
