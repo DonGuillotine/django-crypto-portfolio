@@ -9,6 +9,9 @@ User Authentication
 -   Users can sign up, log in, and log out of the system
 -   Passwords are securely stored and hashed using Django's built-in authentication system
 
+![Screenshot (196)](https://user-images.githubusercontent.com/89584431/231948630-9a0ed657-5817-43f5-b5b0-4d4c336fce34.png)
+
+
 Referral System
 ---------------
 
@@ -31,13 +34,11 @@ Crypto-Currency Wallets
 
 -   Users can see a detail view of their portfolio, which shows the value of each cryptocurrency in their wallet and the total value of their portfolio
 
+![Screenshot (190)](https://user-images.githubusercontent.com/89584431/231945186-326ed496-afa9-4b47-93e6-befee7557e55.png)
+
 -   Users can search for new Cryptocurrencies to add to their portfolio
 
 ![Screenshot (195)](https://user-images.githubusercontent.com/89584431/231946845-719a2d87-1f94-45a6-8919-c9807a656093.png)
-
-
-
-![Screenshot (190)](https://user-images.githubusercontent.com/89584431/231945186-326ed496-afa9-4b47-93e6-befee7557e55.png)
 
 -   Users can View their Previous Holdings
 
