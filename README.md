@@ -60,11 +60,15 @@ Installation
 ------------
 
 1.  Clone the repository: `git clone https://github.com/DonGuillotine/django-crypto-portfolio`
-2.  Install the required packages: `pip install -r requirements.txt`
-3.  Apply database migrations: `python manage.py migrate`
-4.  Create a Superuser: `python manage.py createsuperuser`
-5.  Run the server: `python manage.py runserver`
-6.  In the `settings.py` change `SECRET_KEY = config('SECRET_KEY')` to `SECRET_KEY = "ANYRANDOMKEY"`
+2.  Install a virtual environment `pip install virtualenv` (If you don't have one)
+3.  Create a virtual environment `virtualenv env`
+4.  To Activate the virtual environment `cd Scripts` then type `activate` to activate the virtual environment. Finally change directory back to the project root with `cd ..`
+5.  Install the required packages: `pip install -r requirements.txt`
+6.  Apply database migrations: `python manage.py migrate`
+7.  Create a Superuser: `python manage.py createsuperuser`
+8.  Change Directory `cd crypto_portfolio`
+9.  In the `settings.py` change `SECRET_KEY = config('SECRET_KEY')` to `SECRET_KEY = "ANY-RANDOM-KEY"`
+10. Run the server: `python manage.py runserver`
 
 Usage
 -----
