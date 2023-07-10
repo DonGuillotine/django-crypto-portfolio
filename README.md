@@ -6,8 +6,8 @@ This is a Django project that allows users to manage their cryptocurrency portfo
 User Authentication
 -------------------
 
--   Users can sign up, log in, and log out of the system
--   Passwords are securely stored and hashed using Django's built-in authentication system
+-   Users can sign up, log in, and log out of the system.
+-   Passwords are securely stored and hashed using Django's built-in authentication system.
 
 ![Screenshot (196)](https://user-images.githubusercontent.com/89584431/231948630-9a0ed657-5817-43f5-b5b0-4d4c336fce34.png)
 
