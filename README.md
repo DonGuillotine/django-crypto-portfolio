@@ -1,7 +1,7 @@
 Crypto Portfolio Management System
 ==================================
 
-This is a Django project that allows users to manage their cryptocurrency portfolios by utilizing API calls to the CoinGecko cryptocurrency API. This application was built with a TDD (Test Driven Approach), The following features are implemented:
+I built a Django project that allows users to manage their cryptocurrency portfolios by utilizing API calls to the CoinGecko cryptocurrency API. This application was built with a TDD (Test Driven Approach), The following features are implemented:
 
 User Authentication
 -------------------
